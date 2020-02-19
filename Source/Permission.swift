@@ -51,12 +51,12 @@ open class Permission: NSObject {
     
     #if PERMISSION_CAMERA
     /// The permission to access the camera.
-    open static let camera = Permission(type: .camera)
+    public static let camera = Permission(type: .camera)
     #endif
     
     #if PERMISSION_PHOTOS
     /// The permission to access the user's photos.
-    open static let photos = Permission(type: .photos)
+    public static let photos = Permission(type: .photos)
     #endif
     
     #if PERMISSION_REMINDERS
@@ -133,7 +133,7 @@ open class Permission: NSObject {
     #endif
     
     /// The permission domain.
-    open let type: PermissionType
+    public let type: PermissionType
     
     /// The permission status.
     open var status: PermissionStatus {
